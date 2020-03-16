@@ -70,7 +70,7 @@ for inp in myfiles:
   if inp.is_file() and inp.name[0:2]=='in':
     print('testing {0:s} '.format(inp.name),end='')
     num=int(inp.name[2:])
-    cmd='python3 {0:s} < io/{1:s} > o'.format(prog,inp.name)
+    cmd='python3 main.py < io/{:s} > o'.format(inp.name)
     res=os.system(cmd)
     if res!=0:
       print('runtime error')
